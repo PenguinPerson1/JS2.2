@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    body{
+      background-color: black;
+      background-image: url("https://i.ytimg.com/vi/HhSFP28Mtys/maxresdefault.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+
+    }
+</style>
+<script>
+let random1;
+let repeat;
+let cont = 0;
+
+function battle(){
+  for(repeat = "Yes";repeat=="Yes";){
+    random1 = Math.random();
+    alert("You creep up to the cave where the legenday beast waits, according to the legends, the wind seeming to deter you, the smell of smoke meeting your nose. As you approach the cave, taking cover behind the rocks. Peaking over, you can see the legendary blood red dragon basking in the sunlight, but before you attack, you need to plan.");
+    weapon = prompt("You face a dragon, choose your weapon, Sword, Bow or Magic");
+
+    if(weapon=="Sword"){
+      if(random1 <= 0.4){
+        alert("Somehow you have stabbed the dragon through the scales, dodging claws and teeth and finding a chink in the scales. You settle down, as the dragon's hoard is more than enough to fund your humble lifestyle.");
+      }
+      else if(random1 > 0.4){
+        alert("You have been brave, but as you were charging the dragon caught you in his jaws snapping you up. You have been defeated.");
+      }
+      else{
+        alert("error");
+      }
+    }
+    else if(weapon=="Bow"){
+      if(random1 <= 0.7){
+        alert("Keeping your distance was the right idea, charging would of been fatal. You only had to dodge fire-breath, and easily found the chink in his scales. The magical armor and weapons, along with the vast hoards of gold funded your future as an adventurer.");
+      }
+      else if(random1 > 0.7){
+        alert("Even though keeping your distance was a better idea than charging, fire breath is still hard to dodge. You weren't quick enough and were gulped up as a tasty snack. You have been defeated.");
+      }
+    }
+    else if(weapon=="Magic"){
+      if(random1 <= 0.9){
+        alert("As you were proficient with magic, it was easily the best choice, staying clear of claws and teeth, while still having a shield against flame. A mighty fireball brought down the great beast, and you have found wealth and many magic scrolls in the hoard. You can now devote your life to studying the secrets of the universe");
+      }
+      else if(random1 > 0.9){
+        alert("Even though you were prepared for claws and fire, you didn't put up spells for the blunt hit of the dragon's tail as you were fighting. The hit stunned you, and your spells quickly dissipated. You were crushed with your weak armor, then snapped up. You have been defeated.");
+      }
+    }
+    else {
+      alert("I didn't understand your answer, retry and remember spelling and capitalization matter, try and make it look like the choices.");
+    }
+    repeat = prompt("Do you want to play again? Yes or No?");
+    if(repeat=="No"){
+      alert("Reload if you change your mind")
+    }
+    else if (repeat != "Yes") {
+      alert("I didn't understand your answer, reload and remember spelling and capitalization matter, try and make it look like the choices.")
+    }
+  }
+}
+
+setTimeout(battle,300);
+
+</script>
+</head>
+</html>
